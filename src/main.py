@@ -12,7 +12,7 @@ import gi
 from .sensor import Proximity
 
 gi.require_version('Gtk', '3.0')
-from gi.repository import Gio, GLib, Gtk
+from gi.repository import GLib, Gtk
 
 
 class Application(Gtk.Application):
@@ -27,7 +27,7 @@ class Application(Gtk.Application):
         window = Window(application=self)
         window.set_default_size(320, 512)
         window.show_all()
-        
+
         self.sensor = Proximity()
         self.sensor.connect('changed', window.update_info)
         self.sensor.claim()
