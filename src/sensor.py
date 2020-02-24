@@ -29,6 +29,12 @@ class Proximity(GObject.GObject):
         self.proxy.connect('g-properties-changed',
                            self.properties_changed, None)
 
+    def properties_changed(self, proxy, changed, invalidated, user_data):
+
+        print(changed, invalidated)
+        near = proxy.get_cached_property('ProximityNear').get_boolean()
+        self.emit('changed', near)
+
     def claim(self):
 
         if self.proxy.get_cached_property('HasProximity').get_boolean():
@@ -40,9 +46,3 @@ class Proximity(GObject.GObject):
         if self.proxy.get_cached_property('HasProximity').get_boolean():
             self.proxy.call_sync('ReleaseProximity', None, Gio.DBusCallFlags.NONE,
                                  -1, None)
-
-    def properties_changed(self, proxy, changed, invalidated, user_data):
-
-        print(changed, invalidated)
-        near = proxy.get_cached_property('ProximityNear').get_boolean()
-        self.emit('changed', near)
