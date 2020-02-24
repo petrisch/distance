@@ -31,7 +31,6 @@ class Proximity(GObject.GObject):
 
     def properties_changed(self, proxy, changed, invalidated, user_data):
 
-        print(changed, invalidated)
         near = proxy.get_cached_property('ProximityNear').get_boolean()
         self.emit('changed', near)
 
