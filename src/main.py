@@ -28,12 +28,12 @@ class Application(Gtk.Application):
         window.set_default_size(320, 512)
         window.show_all()
 
-        self.sensor = Proximity()
-        self.sensor.connect('changed', window.update_info)
-        self.sensor.claim()
+        self.proximity = Proximity()
+        self.proximity.connect('changed', window.update_info)
+        self.proximity.claim()
 
     def do_shutdown(self):
-        self.sensor.release()
+        self.proximity.release()
 
 
 class Window(Gtk.ApplicationWindow):
