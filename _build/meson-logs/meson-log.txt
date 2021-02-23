@@ -1,15 +1,15 @@
-Build started at 2021-02-23T14:25:08.707762
+Build started at 2021-02-23T15:01:29.428649
 Main binary: /usr/bin/python3
-Build Options: -Dbackend=ninja
+Build Options: 
 Python system: Linux
 The Meson build system
 Version: 0.55.3
-Source dir: /home/petrisch/proximity
-Build dir: /home/petrisch/proximity/_build
+Source dir: /home/petrisch/distance
+Build dir: /home/petrisch/distance/_build
 Build type: native build
 None of 'PKG_CONFIG_PATH' are defined in the environment, not changing global flags.
 None of 'PKG_CONFIG_PATH' are defined in the environment, not changing global flags.
-Project name: proximity
+Project name: distance
 Project version: 0.1.0
 Build machine cpu family: x86_64
 Build machine cpu: x86_64
@@ -21,8 +21,8 @@ Program desktop-file-validate found: YES
 Adding test "Validate desktop file"
 Program appstream-util found: NO
 Program python3 found: YES
-Configuring proximity using configuration
-Program build-aux/meson/postinstall.py found: YES (/home/petrisch/proximity/build-aux/meson/postinstall.py)
+Configuring distance using configuration
+Program build-aux/meson/postinstall.py found: YES (/home/petrisch/distance/build-aux/meson/postinstall.py)
 Build targets in project: 5
 
 Found ninja-1.10.0 at /usr/bin/ninja

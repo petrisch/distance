@@ -1,6 +1,5 @@
 # ninja log v5
-0	365	1614086708755741026	build.ninja	d7b50d95d512c359
-0	217	1614086709015731742	data/com.example.proximity.appdata.xml	fe16dcaeb5e9bb8a
-0	221	1614086709011731884	data/com.example.proximity.desktop	b9d1433103668a95
-221	725	0	meson-install	9bd7faa9472bf40f
-0	524	0	meson-install	9bd7faa9472bf40f
+0	251	1614088902518614148	data/com.petrisch.distance.desktop	7d35b842d8e00f32
+1	283	1614088902550614417	data/com.petrisch.distance.appdata.xml	539dd7f37e3f2fc7
+0	606	0	meson-install	9bd7faa9472bf40f
+0	530	0	meson-install	9bd7faa9472bf40f

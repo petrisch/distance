@@ -1,7 +1,7 @@
 [Desktop Entry]
-Name=Proximity
-Icon=com.example.proximity
-Exec=proximity
+Name=Distance
+Icon=com.petrisch.distance
+Exec=distance
 Terminal=false
 Type=Application
 StartupNotify=false
