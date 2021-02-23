@@ -1,11 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Proximity example
-# This file is part of the Librem 5 developer documentation.
-
-# Copyright (C) 2020 Purism SPC
-# SPDX-License-Identifier: GPL-3.0+
-# Author: David Boddie <david.boddie@puri.sm>
+# Add some doku
 
 import sys
 import gi
@@ -18,9 +13,9 @@ from gi.repository import GLib, Gtk
 class Application(Gtk.Application):
 
     def __init__(self):
-        super().__init__(application_id='com.example.proximity')
-        GLib.set_application_name(_('Proximity'))
-        GLib.set_prgname('com.example.proximity')
+        super().__init__(application_id='com.petrisch.distance')
+        GLib.set_application_name(_('Distance'))
+        GLib.set_prgname('com.petrisch.distance')
 
     def do_activate(self):
 

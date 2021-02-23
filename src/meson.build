@@ -21,8 +21,8 @@ conf.set('project_name', meson.project_name())
 # directory.
 
 configure_file(
-  input: 'proximity.in',
-  output: 'proximity',
+  input: 'distance.in',
+  output: 'distance',
   configuration: conf,
   install: true,
   install_dir: get_option('bindir')

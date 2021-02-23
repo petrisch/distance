@@ -1,0 +1,9 @@
+# List of files installed by Meson
+# Does not contain files installed by custom scripts.
+/usr/local/share/applications/com.example.proximity.desktop
+/usr/local/share/appdata/com.example.proximity.appdata.xml
+/usr/local/share/icons/hicolor/scalable/apps/com.example.proximity.svg
+/usr/local/bin/proximity
+/usr/local/share/proximity/proximity/__init__.py
+/usr/local/share/proximity/proximity/main.py
+/usr/local/share/proximity/proximity/sensor.py

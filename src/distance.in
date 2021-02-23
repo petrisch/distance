@@ -27,5 +27,5 @@ gettext.install('@project_name@', localedir, names=['ngettext'])
 
 if __name__ == '__main__':
 
-    from proximity import main
+    from distance import main
     sys.exit(main.main(VERSION))

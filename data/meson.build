@@ -5,8 +5,8 @@ pkgdatadir = join_paths(get_option('prefix'), get_option('datadir'), meson.proje
 # directory, found in the project's root, generating a desktop file in the
 # build directory.
 desktop_file = i18n.merge_file(
-  input: 'com.example.proximity.desktop.in',
-  output: 'com.example.proximity.desktop',
+  input: 'com.petrisch.distance.desktop.in',
+  output: 'com.petrisch.distance.desktop',
   type: 'desktop',
   po_dir: '../po',
   install: true,
@@ -23,8 +23,8 @@ endif
 
 # Also generate an AppStream file from the template.
 appstream_file = i18n.merge_file(
-  input: 'com.example.proximity.appdata.xml.in',
-  output: 'com.example.proximity.appdata.xml',
+  input: 'com.petrisch.distance.appdata.xml.in',
+  output: 'com.petrisch.distance.appdata.xml',
   po_dir: '../po',
   install: true,
   install_dir: join_paths(get_option('datadir'), 'appdata')
@@ -39,5 +39,5 @@ if appstream_util.found()
 endif
 
 # Install the application icon to the appropriate locations for its theme.
-install_data('com.example.proximity.svg',
+install_data('com.petrisch.distance.svg',
   install_dir: join_paths(get_option('datadir'), 'icons', 'hicolor', 'scalable', 'apps'))

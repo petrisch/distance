@@ -1,0 +1,1 @@
+[{"cmd": ["/usr/bin/desktop-file-validate", "data/com.example.proximity.desktop"], "env": {}, "name": "Validate desktop file", "workdir": null, "timeout": 30, "suite": ["proximity"], "is_parallel": true, "priority": 0, "protocol": "exitcode"}]

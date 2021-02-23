@@ -1,0 +1,134 @@
+[
+  {
+    "directory": "/home/petrisch/proximity/_build",
+    "command": "/usr/bin/meson --internal msgfmthelper ../data/com.example.proximity.desktop.in data/com.example.proximity.desktop desktop ../data/../po",
+    "file": "../data/com.example.proximity.desktop.in",
+    "output": "data/com.example.proximity.desktop"
+  },
+  {
+    "directory": "/home/petrisch/proximity/_build",
+    "command": "/usr/bin/meson --internal msgfmthelper ../data/com.example.proximity.appdata.xml.in data/com.example.proximity.appdata.xml xml ../data/../po",
+    "file": "../data/com.example.proximity.appdata.xml.in",
+    "output": "data/com.example.proximity.appdata.xml"
+  },
+  {
+    "directory": "/home/petrisch/proximity/_build",
+    "command": "",
+    "file": "meson-ambient_light-pot",
+    "output": "ambient_light-pot"
+  },
+  {
+    "directory": "/home/petrisch/proximity/_build",
+    "command": "",
+    "file": "meson-ambient_light-gmo",
+    "output": "ambient_light-gmo"
+  },
+  {
+    "directory": "/home/petrisch/proximity/_build",
+    "command": "",
+    "file": "meson-ambient_light-update-po",
+    "output": "ambient_light-update-po"
+  },
+  {
+    "directory": "/home/petrisch/proximity/_build",
+    "command": "/usr/bin/meson test --no-rebuild --print-errorlogs",
+    "file": "all",
+    "output": "meson-test"
+  },
+  {
+    "directory": "/home/petrisch/proximity/_build",
+    "command": "",
+    "file": "meson-test",
+    "output": "test"
+  },
+  {
+    "directory": "/home/petrisch/proximity/_build",
+    "command": "/usr/bin/meson test --benchmark --logbase benchmarklog --num-processes=1 --no-rebuild",
+    "file": "all",
+    "output": "meson-benchmark"
+  },
+  {
+    "directory": "/home/petrisch/proximity/_build",
+    "command": "",
+    "file": "meson-benchmark",
+    "output": "benchmark"
+  },
+  {
+    "directory": "/home/petrisch/proximity/_build",
+    "command": "/usr/bin/meson install --no-rebuild",
+    "file": "PHONY",
+    "output": "meson-install"
+  },
+  {
+    "directory": "/home/petrisch/proximity/_build",
+    "command": "",
+    "file": "meson-install",
+    "output": "install"
+  },
+  {
+    "directory": "/home/petrisch/proximity/_build",
+    "command": "/usr/bin/meson dist",
+    "file": "PHONY",
+    "output": "meson-dist"
+  },
+  {
+    "directory": "/home/petrisch/proximity/_build",
+    "command": "",
+    "file": "meson-dist",
+    "output": "dist"
+  },
+  {
+    "directory": "/home/petrisch/proximity/_build",
+    "command": "/usr/bin/meson --internal uninstall",
+    "file": "PHONY",
+    "output": "meson-uninstall"
+  },
+  {
+    "directory": "/home/petrisch/proximity/_build",
+    "command": "",
+    "file": "meson-uninstall",
+    "output": "uninstall"
+  },
+  {
+    "directory": "/home/petrisch/proximity/_build",
+    "command": "",
+    "file": "data/com.example.proximity.desktop",
+    "output": "all"
+  },
+  {
+    "directory": "/home/petrisch/proximity/_build",
+    "command": "",
+    "file": "meson-clean",
+    "output": "clean"
+  },
+  {
+    "directory": "/home/petrisch/proximity/_build",
+    "command": "/usr/bin/meson --internal cleantrees /home/petrisch/proximity/_build/meson-private/cleantrees.dat",
+    "file": "PHONY",
+    "output": "meson-clean-ctlist"
+  },
+  {
+    "directory": "/home/petrisch/proximity/_build",
+    "command": "",
+    "file": "meson-clean-ctlist",
+    "output": "clean-ctlist"
+  },
+  {
+    "directory": "/home/petrisch/proximity/_build",
+    "command": "/usr/bin/ninja -t clean",
+    "file": "PHONY",
+    "output": "meson-clean"
+  },
+  {
+    "directory": "/home/petrisch/proximity/_build",
+    "command": "/usr/bin/meson --internal regenerate /home/petrisch/proximity /home/petrisch/proximity/_build --backend ninja",
+    "file": "../meson.build",
+    "output": "build.ninja"
+  },
+  {
+    "directory": "/home/petrisch/proximity/_build",
+    "command": "/usr/bin/meson --internal regenerate /home/petrisch/proximity /home/petrisch/proximity/_build --backend ninja",
+    "file": "PHONY",
+    "output": "reconfigure"
+  }
+]

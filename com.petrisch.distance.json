@@ -1,16 +1,16 @@
 {
-    "app-id": "com.example.proximity",
+    "app-id": "com.petrisch.distance",
     "runtime": "org.gnome.Platform",
     "runtime-version": "3.34",
     "sdk": "org.gnome.Sdk",
-    "command": "proximity",
+    "command": "distance",
     "finish-args": [
         "--socket=wayland",
         "--system-talk-name=net.hadess.SensorProxy"
     ],
     "modules": [
         {
-            "name": "proximity",
+            "name": "distance",
             "buildsystem": "meson",
             "builddir": true,
             "sources": [

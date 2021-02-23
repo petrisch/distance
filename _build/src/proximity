@@ -1,0 +1,31 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+# Copyright (C) 2020 Purism SPC
+# SPDX-License-Identifier: GPL-3.0+
+# Author: David Boddie <david.boddie@puri.sm>
+
+import gettext
+import locale
+import os
+import signal
+import sys
+
+VERSION = '0.1.0'
+pkgdatadir = '/usr/local/share/proximity'
+localedir = '/usr/local/share/locale'
+
+sys.path.insert(1, pkgdatadir)
+signal.signal(signal.SIGINT, signal.SIG_DFL)
+
+# Enable translation to occur in the extension libraries.
+locale.bindtextdomain('proximity', localedir)
+locale.textdomain('proximity')
+
+# Install a translator for Python code to use throughout the application.
+gettext.install('proximity', localedir, names=['ngettext'])
+
+if __name__ == '__main__':
+
+    from proximity import main
+    sys.exit(main.main(VERSION))
