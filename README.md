@@ -8,5 +8,6 @@ We try to make a tool, that:
 
 - Uses GTK because we want to get it on the librem5 and pinephone
 - Integrates sensors and external measure tools for measuring distances in general
+- Tries to be generic
 
 Thats it lets see
