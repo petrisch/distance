@@ -1,0 +1,24 @@
+{
+    "app-id": "com.example.proximity",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "3.34",
+    "sdk": "org.gnome.Sdk",
+    "command": "proximity",
+    "finish-args": [
+        "--socket=wayland",
+        "--system-talk-name=net.hadess.SensorProxy"
+    ],
+    "modules": [
+        {
+            "name": "proximity",
+            "buildsystem": "meson",
+            "builddir": true,
+            "sources": [
+                {
+                    "type": "dir",
+                    "path": "."
+                }
+            ]
+        }
+    ]
+}

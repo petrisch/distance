@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Proximity
+Icon=com.example.proximity
+Exec=proximity
+Terminal=false
+Type=Application
+StartupNotify=false
