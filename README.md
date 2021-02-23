@@ -1,6 +1,6 @@
 # Distance
 
-Starting form here:
+Starting from here:  
 The documentation for this example can be found in the [Librem 5 developer
 documentation](https://developer.puri.sm/Librem5/Apps/Examples/).
 
