@@ -1,0 +1,30 @@
+Build started at 2021-02-25T10:57:09.271583
+Main binary: /usr/bin/python3
+Build Options: 
+Python system: Linux
+The Meson build system
+Version: 0.55.3
+Source dir: /home/petrisch/distance
+Build dir: /home/petrisch/distance/configure
+Build type: native build
+None of 'PKG_CONFIG_PATH' are defined in the environment, not changing global flags.
+None of 'PKG_CONFIG_PATH' are defined in the environment, not changing global flags.
+Project name: distance
+Project version: 0.1.0
+Build machine cpu family: x86_64
+Build machine cpu: x86_64
+Host machine cpu family: x86_64
+Host machine cpu: x86_64
+Target machine cpu family: x86_64
+Target machine cpu: x86_64
+Program desktop-file-validate found: YES
+Adding test "Validate desktop file"
+Program appstream-util found: NO
+Program python3 found: YES
+Configuring distance using configuration
+Program build-aux/meson/postinstall.py found: YES (/home/petrisch/distance/build-aux/meson/postinstall.py)
+Build targets in project: 5
+
+Found ninja-1.10.0 at /usr/bin/ninja
+None of 'STRIP' are defined in the environment, not changing global flags.
+None of 'STRIP' are defined in the environment, not changing global flags.

@@ -1,0 +1,1 @@
+[{"cmd": ["/usr/bin/desktop-file-validate", "data/com.petrisch.distance.desktop"], "env": {}, "name": "Validate desktop file", "workdir": null, "timeout": 30, "suite": ["distance"], "is_parallel": true, "priority": 0, "protocol": "exitcode"}]
