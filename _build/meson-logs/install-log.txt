@@ -1,9 +1,0 @@
-# List of files installed by Meson
-# Does not contain files installed by custom scripts.
-/usr/local/share/applications/com.petrisch.distance.desktop
-/usr/local/share/appdata/com.petrisch.distance.appdata.xml
-/usr/local/share/icons/hicolor/scalable/apps/com.petrisch.distance.svg
-/usr/local/bin/distance
-/usr/local/share/distance/distance/__init__.py
-/usr/local/share/distance/distance/main.py
-/usr/local/share/distance/distance/sensor.py
