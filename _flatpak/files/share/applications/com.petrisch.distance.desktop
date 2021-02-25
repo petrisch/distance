@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Distance
+Icon=com.petrisch.distance
+Exec=distance
+Terminal=false
+Type=Application
+StartupNotify=false
