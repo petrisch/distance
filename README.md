@@ -10,4 +10,10 @@ We try to make a tool, that:
 - Integrates sensors and external measure tools for measuring distances in general
 - Tries to be generic
 
-Thats it lets see
+Thats it lets see.
+
+So a first Mockup could look like this:
+
+![Mockup](img/initial_ui_design.png)
+
+
