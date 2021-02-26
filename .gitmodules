@@ -1,0 +1,3 @@
+[submodule "BOSCH-GLM-rangefinder"]
+	path = BOSCH-GLM-rangefinder
+	url = https://github.com/philipptrenz/BOSCH-GLM-rangefinder

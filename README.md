@@ -16,4 +16,9 @@ So a first Mockup could look like this:
 
 ![Mockup](img/initial_ui_design.png)
 
+One module that should be able to integrate is the
+
+[BOSCH-GLM-rangefinder](https://github.com/philipptrenz/BOSCH-GLM-rangefinder) by
+Philipp Trenz. By now I added the submodule, but it isn't doing anything.
+
 
