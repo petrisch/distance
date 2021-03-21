@@ -1,0 +1,25 @@
+# -*- coding: utf-8 -*-
+
+# Distance measuring tool
+
+import sys
+
+import src.window as window
+window.debugmessage()
+
+
+#The submodule for the BOSCH devices
+import importlib
+rangefinder = importlib.import_module("BOSCH-GLM-rangefinder.glm100c") 
+#, package='BOSCH-GLM-rangefinder')
+
+if rangefinder == None:
+    print("rangefinder not loaded")
+else: 
+    print("rangefinder loaded as: " + str(rangefinder))
+
+def main(version):
+
+    app = window.Application()
+    return app.run(sys.argv)
+    

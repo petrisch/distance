@@ -1,0 +1,40 @@
+{
+  "id" : "com.petrisch.distance",
+  "runtime" : "org.gnome.Platform",
+  "runtime-version" : "3.38",
+  "runtime-commit" : "edcf9927abf4b19e354070b62e2825b3ce13158f4a51b6010f8b56e62a1c26be",
+  "sdk" : "org.gnome.Sdk",
+  "sdk-commit" : "de7c73f102ced0bb76b7902bb03f2714bc4d0d93786038f50083400aba39247f",
+  "command" : "distance",
+  "modules" : [
+    {
+      "name" : "distance",
+      "buildsystem" : "meson",
+      "builddir" : true,
+      "sources" : [
+        {
+          "path" : ".",
+          "type" : "dir"
+        }
+      ]
+    },
+    {
+      "name" : "pip-install",
+      "buildsystem" : "simple",
+      "build-options" : {
+        "build-args" : [
+          "--share=network"
+        ]
+      },
+      "build-commands" : [
+        "pip3 install --user requests==2.22.0"
+      ]
+    }
+  ],
+  "finish-args" : [
+    "--socket=wayland",
+    "--system-talk-name=net.hadess.SensorProxy",
+    "--allow=bluetooth",
+    "--filesystem=host"
+  ]
+}

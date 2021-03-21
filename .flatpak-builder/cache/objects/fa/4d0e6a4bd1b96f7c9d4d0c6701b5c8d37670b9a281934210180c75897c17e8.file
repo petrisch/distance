@@ -1,0 +1,96 @@
+# -*- coding: utf-8 -*-
+
+# Distance measuring tool
+
+import sys
+import gi
+#TODO: The module for the proximity sensor is not needed anymore
+#from .sensor import Proximity
+
+#The module for the BOSCH devices
+import importlib
+mod = importlib.import_module("glm100c", package='GLM100C')
+
+
+
+gi.require_version('Gtk', '3.0')
+from gi.repository import GLib, Gtk
+
+
+class Application(Gtk.Application):
+
+    def __init__(self):
+        super().__init__(application_id='com.petrisch.distance')
+        GLib.set_application_name(_('Distance'))
+        GLib.set_prgname('com.petrisch.distance')
+
+    def do_activate(self):
+
+        builder = Gtk.Builder()
+        builder.add_from_resource('/com/petrisch/distance/src/distance_window.ui')
+
+        window = builder.get_object("DistanceWindow")
+
+        #window = Window(application=self)
+        window.set_default_size(320, 512)
+        window.show_all()
+
+        self.distance = Distance()
+        self.distance.connect('changed', window.update_info)
+        self.distance.claim()
+
+
+    def do_shutdown(self):
+        #TODO: Shut down the connection when finished
+        #self.distance.release()
+        return ""
+
+
+class Window(Gtk.ApplicationWindow):
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        measure_button = self.get_object("measure_button")
+        measure_button.connect("clicked", self.measure_button_clicked_cb)
+
+        distance1_label = self.get_object("distance1_label")
+
+
+    def update_info(self, sensor, near):
+
+        if near:
+            self.label.set_markup(
+                _('<span size="large"><b>Near</b></span>'))
+        else:
+            self.label.set_markup(
+                _('<span size="large">Far</span>'))
+
+
+#Thats how to connect the button
+#         self.box = Gtk.Box(spacing=6)
+#         self.add(self.box)
+#         self.button = Gtk.Button(label="Click Here")
+#         self.button.set_halign(Gtk.Align.CENTER)
+#         self.button.set_valign(Gtk.Align.CENTER)
+#         self.button.connect("clicked", self.on_button_clicked)
+#         self.box.pack_start(self.button, True, True, 0)
+
+def measure_button_clicked_cb(self):
+    distance = measure_distance()
+    self.distance1_label.set_markup(
+        _('<span size="large">Distance 1 is:' + distance + '</span>'))
+
+
+def measure_distance(self):
+    rangefinder = GLM100C()
+    if not rangefinder.connected: exit(1)
+
+    distance = rangefinder.measure_from_tripod_socket()
+    if distance != -1: return distance
+
+
+def main(version):
+
+    app = Application()
+    return app.run(sys.argv)

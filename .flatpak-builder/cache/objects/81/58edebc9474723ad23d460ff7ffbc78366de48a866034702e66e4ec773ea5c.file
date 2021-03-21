@@ -1,0 +1,13 @@
+[Application]
+name=com.petrisch.distance
+runtime=org.gnome.Platform/x86_64/3.38
+sdk=org.gnome.Sdk/x86_64/3.38
+command=distance
+
+[Context]
+sockets=wayland;
+features=bluetooth;
+filesystems=host;
+
+[System Bus Policy]
+net.hadess.SensorProxy=talk

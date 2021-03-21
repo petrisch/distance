@@ -1,0 +1,32 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+# Copyright (C) 2020 Purism SPC
+# SPDX-License-Identifier: GPL-3.0+
+# Author: David Boddie <david.boddie@puri.sm>
+# Reused: Patrick Jörg <patrickjoerg@gmx.ch>
+
+import gettext
+import locale
+import os
+import signal
+import sys
+
+VERSION = '0.1.0'
+pkgdatadir = '/app/share/distance'
+localedir = '/app/share/locale'
+
+sys.path.insert(1, pkgdatadir)
+signal.signal(signal.SIGINT, signal.SIG_DFL)
+
+# Enable translation to occur in the extension libraries.
+locale.bindtextdomain('distance', localedir)
+locale.textdomain('distance')
+
+# Install a translator for Python code to use throughout the application.
+gettext.install('distance', localedir, names=['ngettext'])
+
+if __name__ == '__main__':
+    print("trying to load main as: " + str(__name__))
+    from distance import main
+    sys.exit(main.main(VERSION))

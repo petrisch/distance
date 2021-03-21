@@ -1,0 +1,40 @@
+mptying app dir '_flatpak'
+Downloading sources
+Starting build of com.petrisch.distance
+Cache hit for python3-requests, skipping build
+Cache miss, checking out last cache hit
+========================================================================
+Building module python3-pybluez in /home/petrisch/distance/.flatpak-builder/build/python3-pybluez-3
+========================================================================
+Running: pip3 install --exists-action=i --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} "pybluez" --no-build-isolation
+Looking in links: file:///run/build/python3-pybluez
+Processing ./PyBluez-0.23.tar.gz
+Building wheels for collected packages: pybluez
+  Building wheel for pybluez (setup.py): started
+  Building wheel for pybluez (setup.py): finished with status 'error'
+  Running setup.py clean for pybluez
+Failed to build pybluez
+Installing collected packages: pybluez
+    Running setup.py install for pybluez: started
+    Running setup.py install for pybluez: finished with status 'error'
+Build failed
+Emptying app dir '_flatpak'
+Downloading sources
+Starting build of com.petrisch.distance
+Cache hit for python3-requests, skipping build
+Cache miss, checking out last cache hit
+========================================================================
+Building module python3-pybluez in /home/petrisch/distance/.flatpak-builder/build/python3-pybluez-4
+========================================================================
+Running: pip3 install --exists-action=i --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} "pybluez" --no-build-isolation
+Looking in links: file:///run/build/python3-pybluez
+Processing ./PyBluez-0.23.tar.gz
+Building wheels for collected packages: pybluez
+  Building wheel for pybluez (setup.py): started
+  Building wheel for pybluez (setup.py): finished with status 'error'
+  Running setup.py clean for pybluez
+Failed to build pybluez
+Installing collected packages: pybluez
+    Running setup.py install for pybluez: started
+    Running setup.py install for pybluez: finished with status 'error'
+Build failed

@@ -1,0 +1,26 @@
+{
+  "id" : "com.petrisch.distance",
+  "runtime" : "org.gnome.Platform",
+  "runtime-version" : "3.38",
+  "runtime-commit" : "2f5f89bf2190d99498d3399bb601bcd7c32e65aa28c07aa87580b5a3b64ebc92",
+  "sdk" : "org.gnome.Sdk",
+  "sdk-commit" : "e81be0a3ec42de52c0da7e4340f05572b2de720ebb4e168dd73fa66b289560b0",
+  "command" : "distance",
+  "modules" : [
+    {
+      "name" : "distance",
+      "buildsystem" : "meson",
+      "builddir" : true,
+      "sources" : [
+        {
+          "path" : ".",
+          "type" : "dir"
+        }
+      ]
+    }
+  ],
+  "finish-args" : [
+    "--socket=wayland",
+    "--system-talk-name=net.hadess.SensorProxy"
+  ]
+}
