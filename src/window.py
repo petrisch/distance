@@ -48,18 +48,23 @@ def measure_distance(self):
 
     try:
         print("Initializing GLM50C")
-        glm100c = rangefinder.GLM50C()
-        if not glm100c.connected:
+        glm50c = rangefinder.GLM50C()
+        if not glm50c.connected:
             distance = "No Connection"
             return distance
-        distance = glm100c.measure_from_tripod_socket(glm100c)
+        distance = glm50c.measure_from_tripod_socket(glm50c)
         if distance != -1:
-            distance = "No value measured"
             return distance
+        else:
+            distance = "No value measured"
 
     except OSError:
         print("No Device connected")
-        distance = "Conection error"
+        distance = "OS error"
         return distance
+    except ConnectionError:
+        print("No Connection posible")
+        distance = "Connection Error"
+        return
 
 
