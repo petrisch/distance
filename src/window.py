@@ -6,40 +6,11 @@ import gi
 gi.require_version('Gtk', '3.0')
 from gi.repository import GLib, Gtk
 from gi_composites import GtkTemplate
-#from __future__ import print_function
-
-#class Application(Gtk.Application):
-
-#    def __init__(self):
-#        super().__init__(application_id='com.petrisch.distance')
-#        GLib.set_application_name(_('Distance'))
-#        GLib.set_prgname('com.petrisch.distance')
-
-#    def do_activate(self):
-#        builder = Gtk.Builder()
-#        When using flatpak
-#        builder.add_from_resource('/com/petrisch/distance/src/distance_window.ui')
-#        window = builder.get_object("DistanceWindow")
-#        window = Window(application=self)
-
-#         window.set_default_size(320, 512)
-#        window.show_all()
-
-#        self.distance = Distance()
-#        self.distance.connect('changed', window.update_info)
-#        self.distance.claim()
-
-
-#    def do_shutdown(self):
-#        TODO: Shut down the connection when finished
-#         self.distance.release()
-#        return ""
-
 
 @GtkTemplate(ui='src/distance_window.ui')
 class DistanceWindow(Gtk.Box):
 
-    print("Trying initialising the GUI: ")
+    print("Loading GUI from Template")
 
     __gtype_name__ = 'DistanceWindow'
     measure_button1 = GtkTemplate.Child()
@@ -47,15 +18,14 @@ class DistanceWindow(Gtk.Box):
     SaveCSV_Button = GtkTemplate.Child()
     distance1_label3 = GtkTemplate.Child()
 
-    print("Loaded GUI elements: " + str(measure_button1) + ", " + str(Labelbox))
-
+    print("Loaded GUI elements")
 
     def __init__(self):
         #super(Gtk.Box, self).__init__()
-        print("Trying init 2")
+        print("Initializing GUI")
         super().__init__()
         self.init_template()
-        self.measure_button1.clicked()
+        #self.measure_button1.clicked()
 
 
     @GtkTemplate.Callback
@@ -77,8 +47,8 @@ def measure_distance(self):
     print("rangefinder loaded in window as: " + str(rangefinder))
 
     try:
-        print("Initializing GLM")
-        glm100c = rangefinder.GLM()
+        print("Initializing GLM50C")
+        glm100c = rangefinder.GLM50C()
         if not glm100c.connected:
             distance = "No Connection"
             return distance
@@ -89,7 +59,7 @@ def measure_distance(self):
 
     except OSError:
         print("No Device connected")
-        distance = "No Connection1"
+        distance = "Conection error"
         return distance
 
 
