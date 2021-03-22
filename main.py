@@ -10,7 +10,6 @@ from gi.repository import GLib, Gtk
 #print(sys.path)
 
 #from distance import window
-#window.debugmessage()
 import src.window as window
 
 #The submodule for the BOSCH devices

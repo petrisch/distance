@@ -32,13 +32,13 @@
       </packing>
     </child>
     <child>
-      <object class="GtkBox" id="Labelbox">
+      <object class="GtkBox">
         <property name="visible">True</property>
         <property name="can-focus">False</property>
         <property name="orientation">vertical</property>
         <property name="homogeneous">True</property>
         <child>
-          <object class="GtkButton" id="SaveCSV_Button">
+          <object class="GtkButton">
             <property name="label" translatable="yes">Save to csv</property>
             <property name="visible">True</property>
             <property name="can-focus">True</property>
@@ -218,6 +218,24 @@
         <property name="fill">True</property>
         <property name="position">2</property>
       </packing>
+    </child>
+    <child>
+      <placeholder/>
+    </child>
+    <child>
+      <placeholder/>
+    </child>
+    <child>
+      <placeholder/>
+    </child>
+    <child>
+      <placeholder/>
+    </child>
+    <child>
+      <placeholder/>
+    </child>
+    <child>
+      <placeholder/>
     </child>
   </template>
 </interface>

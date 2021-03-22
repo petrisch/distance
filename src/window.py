@@ -8,10 +8,6 @@ from gi.repository import GLib, Gtk
 from gi_composites import GtkTemplate
 #from __future__ import print_function
 
-#The submodule for the BOSCH devices
-import importlib
-rangefinder = importlib.import_module("BOSCH-GLM-rangefinder.glm100c")
-
 #class Application(Gtk.Application):
 
 #    def __init__(self):
@@ -43,10 +39,16 @@ rangefinder = importlib.import_module("BOSCH-GLM-rangefinder.glm100c")
 @GtkTemplate(ui='src/distance_window.ui')
 class DistanceWindow(Gtk.Box):
 
+    print("Trying initialising the GUI: ")
+
     __gtype_name__ = 'DistanceWindow'
     measure_button1 = GtkTemplate.Child()
+    Labelbox = GtkTemplate.Child()
+    SaveCSV_Button = GtkTemplate.Child()
+    distance1_label3 = GtkTemplate.Child()
 
-    print("Trying init")
+    print("Loaded GUI elements: " + str(measure_button1) + ", " + str(Labelbox))
+
 
     def __init__(self):
         #super(Gtk.Box, self).__init__()
@@ -59,23 +61,35 @@ class DistanceWindow(Gtk.Box):
     @GtkTemplate.Callback
     def measure_button1_clicked_cb(self, widget):
         distance = measure_distance(self)
-        print("The distance is:" + distance)
-        self.distance1_label.set_markup(
-        _('<span size="large">Distance 1 is:' + distance + '</span>'))
+        print("The distance is:" + str(distance))
+        self.distance1_label3.set_markup(
+        _('<span size="large">Distance 1 is:' + str(distance) + '</span>'))
         #def  measure_button = self.get_object("measure_button")
         #measure_button.connect("clicked", self.measure_button_clicked_cb)
         #distance1_label = self.get_object("distance1_label")
 
 
 def measure_distance(self):
-    print("Trying to measure distance")
+
+    #The submodule for the BOSCH devices. Has to be done that way because of the "-" in the Name
+    import importlib
+    rangefinder = importlib.import_module("BOSCH-GLM-rangefinder.glm100c")
     print("rangefinder loaded in window as: " + str(rangefinder))
-    if not rangefinder.GLM.connected: exit(1)
 
-    distance = rangefinder.measure_from_tripod_socket()
-    if distance != -1: return distance
+    try:
+        print("Initializing GLM")
+        glm100c = rangefinder.GLM()
+        if not glm100c.connected:
+            distance = "No Connection"
+            return distance
+        distance = glm100c.measure_from_tripod_socket(glm100c)
+        if distance != -1:
+            distance = "No value measured"
+            return distance
 
-def debugmessage():
-    print("Window module is loaded")
+    except OSError:
+        print("No Device connected")
+        distance = "No Connection1"
+        return distance
 
 
