@@ -1,11 +1,7 @@
-# Copyright (C) 2020 Purism SPC
-# SPDX-License-Identifier: GPL-3.0+
-# Author: David Boddie <david.boddie@puri.sm>
 
 import gi
-
-gi.require_version('Gtk', '3.0')
 from gi.repository import Gio, GObject
+gi.require_version('Gtk', '4')
 
 
 class Proximity(GObject.GObject):
@@ -37,11 +33,11 @@ class Proximity(GObject.GObject):
     def claim(self):
 
         if self.proxy.get_cached_property('HasProximity').get_boolean():
-            self.proxy.call_sync('ClaimProximity', None, Gio.DBusCallFlags.NONE,
-                                 -1, None)
+            self.proxy.call_sync('ClaimProximity',
+                                 None, Gio.DBusCallFlags.NONE, -1, None)
 
     def release(self):
 
         if self.proxy.get_cached_property('HasProximity').get_boolean():
-            self.proxy.call_sync('ReleaseProximity', None, Gio.DBusCallFlags.NONE,
-                                 -1, None)
+            self.proxy.call_sync('ReleaseProximity', None,
+                                 Gio.DBusCallFlags.NONE, -1, None)

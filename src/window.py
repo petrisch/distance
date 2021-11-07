@@ -3,9 +3,10 @@
 # The ui handling part
 
 import gi
-gi.require_version('Gtk', '3.0')
 from gi.repository import GLib, Gtk
 from gi_composites import GtkTemplate
+gi.require_version('Gtk', '3.0')
+
 
 @GtkTemplate(ui='src/distance_window.ui')
 class DistanceWindow(Gtk.Box):
@@ -21,27 +22,30 @@ class DistanceWindow(Gtk.Box):
     print("Loaded GUI elements")
 
     def __init__(self):
-        #super(Gtk.Box, self).__init__()
+        # super(Gtk.Box, self).__init__()
         print("Initializing GUI")
         super().__init__()
         self.init_template()
-        #self.measure_button1.clicked()
-
+        # self.measure_button1.clicked()
 
     @GtkTemplate.Callback
     def measure_button1_clicked_cb(self, widget):
         distance = measure_distance(self)
         print("The distance is:" + str(distance))
         self.distance1_label3.set_markup(
-        _('<span size="large">Distance 1 is:' + str(distance) + '</span>'))
-        #def  measure_button = self.get_object("measure_button")
-        #measure_button.connect("clicked", self.measure_button_clicked_cb)
-        #distance1_label = self.get_object("distance1_label")
+                             _('<span size="large">Distance 1 is:'
+                                 + str(distance) + '</span>'))
+
+        # def  measure_button = self.get_object("measure_button")
+        # measure_button.connect("clicked", self.measure_button_clicked_cb)
+        # distance1_label = self.get_object("distance1_label")
 
 
 def measure_distance(self):
 
-    #The submodule for the BOSCH devices. Has to be done that way because of the "-" in the Name
+    # The submodule for the BOSCH devices.
+    # Has to be done that way because of the "-" in the Name
+
     import importlib
     rangefinder = importlib.import_module("BOSCH-GLM-rangefinder.glm100c")
     print("rangefinder loaded in window as: " + str(rangefinder))
@@ -66,5 +70,3 @@ def measure_distance(self):
         print("No Connection posible")
         distance = "Connection Error"
         return
-
-
