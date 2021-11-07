@@ -5,11 +5,11 @@
 import subprocess
 import sys
 import gi
-gi.require_version('Gtk', '3.0')
+gi.require_version('Gtk', '4')
 from gi.repository import GLib, Gtk
 
 
-#TODO:Most of the comments here are for a generall purpose when using a more packaged versino with Flatpak.
+#TODO:Most of the comments here are for a generall purpose when using a more packaged version with Flatpak.
 #from distance import window
 #from distance import glm100c
 import src.window as window
