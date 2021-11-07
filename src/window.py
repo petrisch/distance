@@ -5,7 +5,7 @@
 import gi
 from gi.repository import GLib, Gtk
 from gi_composites import GtkTemplate
-gi.require_version('Gtk', '3.0')
+gi.require_version('Gtk', '4.0')
 
 
 @GtkTemplate(ui='src/distance_window.ui')

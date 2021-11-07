@@ -1,7 +1,7 @@
 
 import gi
 from gi.repository import Gio, GObject
-gi.require_version('Gtk', '4')
+gi.require_version('Gtk', '4.0')
 
 
 class Proximity(GObject.GObject):
