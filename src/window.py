@@ -4,9 +4,9 @@
 
 import gi
 from gi.repository import GLib, Gtk
-from gi_composites import GtkTemplate
 gi.require_version('Gtk', '4.0')
 
+# TODO: Remove this whole Template thing since there is no such thing!
 
 @GtkTemplate(ui='src/distance_window.ui')
 class DistanceWindow(Gtk.Box):
