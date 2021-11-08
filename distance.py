@@ -13,7 +13,7 @@ def on_activate(app):
     win.set_title("GTK4 Beispiel")
     win.set_default_size(300, 200)
     btn = Gtk.Button(label="Measure distance")
-    btn.connect('clicked', lambda x: measure_distance(btn) # win.close())
+    btn.connect('clicked', lambda x: measure_distance(btn)) # win.close())
     win.set_child(btn)
     win.present()
 
