@@ -31,7 +31,7 @@ def measure_distance(self):
         if not glm50c.connected:
             distance = "No Connection"
             self.set_label(distance)
-        distance = glm50c.measure_from_tripod_socket()
+        distance = glm50c.measure_from_tripod_socket(glm50c)
         if distance != -1:
             self.set_label(distance)
         else:
